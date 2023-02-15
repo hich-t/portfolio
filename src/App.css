@@ -3,13 +3,39 @@
   src: local("Helvetica.ttc"), url("../fonts/Helvetica.ttc") format("truetype");
 }
 
-body{
-  background-color: white;
+@font-face {
+  font-family: "Oceanwide";
+  src: local("Oceanwide-Semibold.otf"), url("../fonts/Oceanwide-Semibold.otf") format("opentype");
 }
 
+
+body{
+  background-color: #4158D0;
+  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+  background-size: 160% 110%;
+  animation: smooth-gradient 6s ease infinite;
+}
+
+@keyframes smooth-gradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  25% {background-position: 40% 30%;}
+
+  50% {
+    background-position: 100% 50%;
+  }
+  75% {background-position: 75% 25%;}
+  100% {
+    background-position: 0% 35%;
+  }
+}
+
+
+
+
 .headerdiv{
-  margin-right: auto;
-  margin-left: auto;
+  height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
@@ -17,18 +43,25 @@ body{
 }
 
 .header {
-
-  color: black;
+  width: 100%;
+  color: white;
   text-align: left;
-  font-family: "Helvetica";
-  font-size:35px;
+  font-family: "Oceanwide";
+  font-size:90px;
   font-weight: Bold;
   margin: 50px;
   position: relative;
   display: flex;
-  align-items: center;
-  justify-content: center;
+    justify-content: flex-start;
   flex-direction: column;
+  transition: all 0.5s ease-in-out;
+  position: relative;
+
+}
+
+.header.fixed {
+  position: absolute;
+  top: -100vh;
 }
 
 .welcome{
@@ -37,14 +70,14 @@ body{
 }
 
 .welcome-text{
-  color: rgb(0, 92, 220);
-  font-weight: Bolder;
-  font-family:  "Helvetica";
+  color: rgb(255, 255, 255);
+  font-family:  sans-serif;
+  font-weight: 100;
   font-size: 25px ;
   margin: 20px 0;
   animation: fade-in 1s ease-in-out;
   opacity: 0;
-  animation-delay: 1s;
+  animation-delay: none;
   animation-fill-mode: forwards;
 
 }
@@ -74,13 +107,13 @@ body{
 
 
 .typing-text {
-  display: inline-block;
+  display: flex;
+  justify-content: flex-start;
+  align-items: flex-start;
   position: relative;
-  width: 500px;
-  animation: typing 1s steps(30, end);
+  animation: typing 0.5s steps(30, end);
   overflow: hidden;
   white-space: nowrap;
-  text-align: left;
 
 }
 
@@ -92,6 +125,46 @@ body{
 @keyframes blink-caret {
   from, to { border-color: transparent }
   50% { border-color: black }
+}
+
+.arrow {
+  position: fixed;
+  bottom: 20px;
+  left: 50%;
+  transform: translateX(-50%);
+  animation: bounce 2s infinite;
+  text-align: center;
+}
+
+.arrow i {
+  font-size: 2.5rem;
+  color: white;
+}
+
+@keyframes bounce {
+  0% {
+    transform: translate(-50%, 0);
+    animation-timing-function: cubic-bezier(0.6, 0.05, 0.1, 0.3);
+  }
+  50% {
+    transform: translate(-50%, 20px);
+    animation-timing-function: cubic-bezier(0.6, 0.05, 0.1, 0.3);
+  }
+  100% {
+    transform: translate(-50%, 0);
+    animation-timing-function: cubic-bezier(0.6, 0.05, 0.1, 0.3);
+  }
+}
+
+.arrowimg{
+  width: 30px;
+}
+
+.scrolltext{
+  color: white;
+  font-family: sans-serif;
+  font-weight: 500;
+  font-size: 16px;
 }
 
 .cursor {
@@ -124,15 +197,16 @@ body{
 
 .contentframe{
   display: flex;
-  box-shadow: rgba(50, 50, 93, 0.25) 0px 6px 12px -2px,
-   rgba(0, 0, 0, 0.3) 0px 3px 7px -3px;
+  box-shadow: rgba(50, 50, 93, 0.25) 0px 50px 100px -20px, rgba(0, 0, 0, 0.3) 0px 30px 60px -30px, rgba(10, 37, 64, 0.35) 0px -2px 6px 0px inset;
    width: 70%;
    border-radius: 20px;
    overflow: hidden;
    margin: 30px;
+   
 }
 
 .contentpage{
+
     animation: fade-in 1s ease-in-out;
     opacity: 0;
     animation-delay: 3s;
@@ -152,38 +226,61 @@ body{
   .navbar{
     width: 100%;
     height: 60px;
-    background-color: black;
     display: flex;
     justify-content: space-between;
     align-items: center;
   }
 
   .logo{
-    font-family: "Helvetica";
-    font-weight: Bold;
-    font-size: 35px;
-    color: white;
-    text-transform: uppercase;
-    margin: 0 25px;
+  width: 50px;
+  margin-left : 40px;
+  border-right: 1px solid white;
+  padding-right: 45px;
   }
 
   .aboutme{
-    font-family: "Helvetica";
-    font-weight: Bold;
-    font-size: 15px;
+    font-family: "Oceanwide";
+    font-weight: Bolder;
+    font-size: 22px;
     color: white;
-    text-transform: uppercase;
     margin: 0 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+
+  }
+
+  .aboutme:hover{
+
   }
 
   .contactme{
-    font-family: "Helvetica";
-    font-weight: Bold;
-    font-size: 15px;
+    font-family: "Oceanwide";
+    font-weight: Bolder;
+    font-size: 22px;
     color: white;
-    text-transform: uppercase;
     margin: 0 25px;
+    border: none;
+    background-color: transparent;
   }
+
+  .contactme:hover{
+
+  }
+
+
+
+  .contactme a {
+    text-decoration: none;
+    Color: white;
+    cursor: pointer;
+
+  }
+
+.hrbar{
+  color: black;
+  width: 80%;
+}
 
   a{
     max-width: 500px;
@@ -196,8 +293,36 @@ body{
   .projectdescription{
     display: flex;
     flex-direction: column;
-    font-family: "Helvetica";
+    font-family: "Oceanwide";
+    color: white;
     justify-content: center;
     align-items: flex-start;
     padding: 20px;
   }
+
+  .myresume{
+    font-family: "Oceanwide";
+    font-weight: Bolder;
+    font-size: 22px;
+    color: white;
+    margin: 0 25px;
+    border: none;
+    background-color: transparent;
+    cursor: pointer;
+  }
+
+  .myresume:hover{
+
+  }
+
+.logolinkedin{
+  width: 40px;
+  margin-left: 45px;
+}
+
+.logogithub{
+  width: 40px;
+  margin-left: 40px;
+  border-right: 1px solid white;
+  padding-right: 45px;
+}
