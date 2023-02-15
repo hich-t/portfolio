@@ -6,7 +6,7 @@ const Content = () => {
         <div className="contentpage">
         {/* paris together */}
         <div className="contentframe"> 
-        <a href="">
+        <a href="" target="_blank" rel="noreferrer noopener">
         <img className="websitethumbs" src="../paristogether_screen.png" alt="screenshot paristogether"/>
         </a>
         <div className="projectdescription">
@@ -20,8 +20,8 @@ const Content = () => {
 
 
         {/* poke arena */}
-        <div className="contentframe"> 
-        <a href="https://pokearena.vercel.app/">
+        <div className="contentframe"  > 
+        <a href="https://pokearena.vercel.app/" target="_blank" rel="noreferrer noopener">
         <img className="websitethumbs" src="../pokearena_screen.png" alt="screenshot paristogether"/>
         </a>
         <div className="projectdescription">
@@ -33,8 +33,8 @@ const Content = () => {
         </div>
 
            {/* Iron Duck */}
-           <div className="contentframe"> 
-         <a href="https://project-week3-game.vercel.app/">
+           <div className="contentframe" > 
+         <a href="https://project-week3-game.vercel.app/" target="_blank" rel="noreferrer noopener">
         <img className="websitethumbs" src="../ironduck_screen.png" alt="screenshot paristogether"/>
         </a>
         <div className="projectdescription">
@@ -50,8 +50,8 @@ const Content = () => {
 
 
            {/* hackernews */}
-           <div className="contentframe"> 
-        <a href="https://clonehackernews.vercel.app/">
+           <div className="contentframe" >  
+        <a href="https://clonehackernews.vercel.app/" target="_blank" rel="noreferrer noopener">
         <img className="websitethumbs" src="../hackernews_screen.png" alt="screenshot paristogether"/>
         </a>
         <div className="projectdescription">
@@ -63,8 +63,8 @@ const Content = () => {
         </div>
 
         {/* AnimDB */}
-        <div className="contentframe"> 
-        <a href="https://anim-db.vercel.app/">
+        <div className="contentframe" > 
+        <a href="https://anim-db.vercel.app/" target="_blank" rel="noreferrer noopener">
         <img className="websitethumbs" src="../animedb_screen.png" alt="screenshot paristogether"/>
         </a>
         <div className="projectdescription">

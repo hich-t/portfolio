@@ -3,7 +3,7 @@ import React, { useState, useEffect } from 'react';
 import Navbar from "./Navbar"
 import Header from "./Header"
 import Content from "./Content"
-
+import Footer from "./Footer"
 
 const App = () => {
   const [showWelcomeText, setShowWelcomeText] = useState(false);
@@ -50,6 +50,8 @@ const App = () => {
     <Content  />
   
 )}
+
+<Footer />
 </>
   )
 }

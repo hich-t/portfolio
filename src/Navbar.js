@@ -17,19 +17,33 @@ const Navbar = () => {
   return (
     <div className="navbar">
       <div className="logos_leftside">
+
+
         <img className="logo" src="../h_logo.png" alt="h logo" />
+
+
 
         <img
           className="logolinkedin"
           src="../linkedin_logo.png"
           alt="linkedin logo"
+          onClick={() => window.open('https://www.linkedin.com/in/hicht/')}
+
         />
         <img
           className="logogithub"
           src="../github_logo.png"
           alt="linkedin logo"
+          onClick={() => window.open('https://github.com/hich-t')}
+
         />
+
+
+
       </div>
+
+
+
       <button
         className="aboutme"
         onClick={() => {
@@ -40,18 +54,35 @@ const Navbar = () => {
       </button>
 
       <Overlay configs={configs} isOpen={isOpen} closeOverlay={closeOverlay}>
-        <h2>Wemcome to my Portfolio !</h2>
+
+        <div className='aboutmehead'>  
+        <img className="hichpic" src="../hich.jpg" alt="Hicham"/>
+
+        <h2>Welcome to my Portfolio !</h2>
+        </div>
+        <div className="aboutmetext">
         <p>
           I'm Hicham, 34y old and living in the Paris Area, France.
           <br />
           <br />
-          I have quite a diverse background, I've begun my career in the CGi
-          world, where I was a general CGI 3D artist at first and then slowly
-          shifted to character animation.
+          I'm currently seeking a position to hone my skills as a Junior Web Developer (preferably front end for now), as I just graduated the IronHack bootcamp.<br/>
+          During this intense adventure, i learned the fundamentals of JS, ReactJS for the front-end side, and Express, Node, MongoDB for the back-end. 
           <br />
-          During my studies (and after), I also workd in the personal security
-          business and the hospitaly field, as a receptionnist
+          <br /> 
+          Before that, my background is quite diverse.<br />
+          I started in the CGI industry as a 3D generalist artist, then shifted to a character animation specialisation. During a few years I had the chance to work of diverses projects as a 3D artist, consultant, 3D animator, etc... Amongst and for various people all over the world. 
+          <br /> 
+          <br /> 
+          Then, I embraced another carrer in retail, mixing my skills in the graphic world and my past experience in the hospitality world to manage several teams over the years. <br/>
+          After that, I started my own business, and faced joys, challenges (especially during the COVID pandemic), and satisfactions. <br />
+          <br />
+          The next chapter after that took place in Morocco, where i successfully joined a great team of young and talented people in the IT business. It was a great ride.
+          <br />
+          <br/>
+          Now I'm back in Paris and ready to rumble !
+
         </p>
+        </div>
       </Overlay>
 
       <button className="myresume">Resume</button>

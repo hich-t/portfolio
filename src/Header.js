@@ -48,6 +48,9 @@ const Header = ({ setShowWelcomeText }) => {
     return () => clearTimeout(timeout);
   }, [setShowWelcomeText]);
 
+
+
+
   return (
     <div className={`header${fixed ? ' fixed' : ''}`}>
 
