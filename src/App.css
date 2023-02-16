@@ -42,6 +42,18 @@ body{
  
 }
 
+@media (max-width: 1050px) {
+  .headerdiv{
+    height: 100vh;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    padding: 59px;
+    flex-wrap: wrap;
+  }
+  
+}
+
 .header {
   width: 100%;
   color: white;
@@ -115,6 +127,7 @@ body{
   animation: typing 0.3s steps(30, end);
   overflow: hidden;
   white-space: nowrap;
+  flex-wrap: wrap;
 
 }
 
@@ -203,8 +216,20 @@ body{
    width: 70%;
    border-radius: 20px;
    overflow: hidden;
-   margin: 30px;
+   margin: 30px;    
    
+}
+
+@media (max-width: 1050px) {
+  .contentframe{
+    flex-direction: column; 
+    width: 70%; 
+    margin: 20px auto; 
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: center;
+  }
 }
 
 .contentpage{
@@ -232,6 +257,17 @@ body{
     justify-content: space-between;
     align-items: center;
     margin-top: 10px;
+    flex-wrap:wrap;
+  }
+
+  @media (max-width: 1050px) {
+    .navbar {
+      display: flex;
+      flex-direction: column;
+      justify-content: flex-start;
+      align-items: flex-start;
+      padding: 10px;
+    }
   }
 
   .logo{
@@ -239,7 +275,14 @@ body{
   margin-left : 70px;
   padding-right: 45px;
   }
+  @media (max-width: 1050px) { 
 
+    .logo{
+      width: 50px;
+      margin-left : 5px;
+      padding-right: 5px;
+      }
+  }
 
 
   .aboutme{
@@ -252,6 +295,20 @@ body{
     background-color: transparent;
     cursor: pointer;
 
+  }
+
+  @media (max-width: 1050px) {
+    .aboutme{
+      font-family: "Oceanwide";
+      font-weight: Bolder;
+      font-size: 22px;
+      color: white;
+      margin: 0 5px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+  
+    }
   }
 
   .aboutme:hover{
@@ -267,6 +324,18 @@ body{
     margin: 0 70px 0 25px;
     border: none;
     background-color: transparent;
+  }
+
+  @media (max-width: 1050px) {
+    .contactme{
+      font-family: "Oceanwide";
+      font-weight: Bolder;
+      font-size: 22px;
+      color: white;
+      margin: 0 5px 0 5px;
+      border: none;
+      background-color: transparent;
+    }
   }
 
   .contactme:hover{
@@ -322,6 +391,20 @@ body{
     cursor: pointer;
   }
 
+
+  @media (max-width: 1050px) {
+    .myresume{
+      font-family: "Oceanwide";
+      font-weight: Bolder;
+      font-size: 22px;
+      color: white;
+      margin: 0 5px;
+      border: none;
+      background-color: transparent;
+      cursor: pointer;
+    }
+  }
+  
   .myresume:hover{
     transform: scale(1.1);
 
@@ -336,11 +419,24 @@ body{
   transform: scale(1.1);
 }
 
+@media (max-width: 1050px) { 
+
+  logolinkedin{
+    width: 40px;
+    margin-left: 10px;
+    cursor: pointer;
+  }
+
+}
+
+
 .logogithub{
   width: 40px;
   margin-left: 40px;
   cursor: pointer;
 }
+
+
 
 .logogithub:hover{
   transform: scale(1.1);
