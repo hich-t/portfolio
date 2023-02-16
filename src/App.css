@@ -234,7 +234,7 @@ body{
 @media (max-width: 1050px) {
   .contentframe{
     flex-direction: column; 
-    width: 70%; 
+    width: 50%; 
     margin: 20px auto; 
     display: flex;
     flex-direction: column;
@@ -375,6 +375,7 @@ body{
   a{
     max-width: 500px;
   }
+
   .websitethumbs{
     width: 400px;
     min-height: 100%;
@@ -389,6 +390,21 @@ body{
     align-items: flex-start;
     padding: 20px;
   }
+
+  @media (max-width: 1050px) { 
+    .projectdescription{
+      display: flex;
+      flex-direction: column;
+      font-family: "Oceanwide";
+      color: white;
+      justify-content: center;
+      align-items: center;
+      padding: 20px;
+      width: 60%;
+    }
+
+  }
+
 
   .myresume{
     font-family: "Oceanwide";
