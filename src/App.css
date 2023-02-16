@@ -13,7 +13,7 @@ body{
   background-color: #4158D0;
   background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
   background-size: 160% 110%;
-  animation: smooth-gradient 6s ease infinite;
+  animation: smooth-gradient 5s ease infinite;
 }
 
 @keyframes smooth-gradient {
@@ -231,6 +231,7 @@ body{
     display: flex;
     justify-content: space-between;
     align-items: center;
+    margin-top: 10px;
   }
 
   .logo{
@@ -273,7 +274,12 @@ body{
 
   }
 
+  .myresume  a {
+    text-decoration: none;
+    Color: white;
+    cursor: pointer;
 
+  }
 
   .contactme a {
     text-decoration: none;

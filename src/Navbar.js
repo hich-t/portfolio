@@ -85,7 +85,12 @@ const Navbar = () => {
         </div>
       </Overlay>
 
-      <button className="myresume">Resume</button>
+      <button className="myresume"
+      >
+         <a href="../Resume_HichamThabti.pdf" target="_blank">
+        Resume       
+        </a>
+      </button>
 
       <button
         className="contactme"
