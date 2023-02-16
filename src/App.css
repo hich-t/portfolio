@@ -48,7 +48,7 @@ body{
     display: flex;
     justify-content: center;
     align-items: center;
-    padding: 59px;
+    padding: 0 10px;
     flex-wrap: wrap;
   }
   
@@ -149,6 +149,17 @@ body{
   transform: translateX(-50%);
   animation: bounce 2s infinite;
   text-align: center;
+}
+
+@media (max-width: 1050px) {
+
+  .arrow {
+    position: fixed;
+    bottom: -5px;
+    transform: translateX(-50%);
+    animation: bounce 2s infinite;
+    text-align: center;
+  }
 }
 
 .arrow i {
@@ -280,7 +291,6 @@ body{
     .logo{
       width: 50px;
       margin-left : 5px;
-      padding-right: 5px;
       }
   }
 
@@ -421,9 +431,9 @@ body{
 
 @media (max-width: 1050px) { 
 
-  logolinkedin{
+  .logolinkedin{
     width: 40px;
-    margin-left: 10px;
+    margin-left: 1px;
     cursor: pointer;
   }
 
@@ -524,3 +534,6 @@ body{
 .aboutmetext{
   padding: 0 40px 40px 40px;
 }
+
+
+
