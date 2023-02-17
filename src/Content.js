@@ -6,7 +6,7 @@ const Content = () => {
         <div className="contentpage">
         {/* paris together */}
         <div className="contentframe"> 
-        <a href="" target="_blank" rel="noreferrer noopener">
+        <a href="https://paris-together-front.vercel.app/" target="_blank" rel="noreferrer noopener">
         <img className="websitethumbs" src="../paristogether_screen.png" alt="screenshot paristogether"/>
         </a>
         <div className="projectdescription">
@@ -14,6 +14,8 @@ const Content = () => {
         <p>Paris Together was the last project we made at Ironhack.<br/>
         Back-end : Node.js Express Mongoose / Front : ReactJS (some MUI)<br />
         The idea was to make a website that brought people together with all the differents events that the great city of Paris could offer. 
+        <br />
+        (The back-end is also deployed on Vercel so it might be slow)
         </p>
         </div>
         </div>
