@@ -5,13 +5,18 @@
 
 @font-face {
   font-family: "Oceanwide";
-  src: local("Oceanwide-Semibold.otf"), url("../fonts/Oceanwide-Semibold.otf") format("opentype");
+  src: local("Oceanwide-Semibold.otf"),
+    url("../fonts/Oceanwide-Semibold.otf") format("opentype");
 }
 
-
-body{
-  background-color: #4158D0;
-  background-image: linear-gradient(43deg, #4158D0 0%, #C850C0 46%, #FFCC70 100%);
+body {
+  background-color: #4158d0;
+  background-image: linear-gradient(
+    43deg,
+    #4158d0 0%,
+    #c850c0 46%,
+    #ffcc70 100%
+  );
   background-size: 160% 110%;
   animation: smooth-gradient 5s ease infinite;
 }
@@ -20,30 +25,30 @@ body{
   0% {
     background-position: 0% 50%;
   }
-  25% {background-position: 40% 30%;}
+  25% {
+    background-position: 40% 30%;
+  }
 
   50% {
     background-position: 100% 50%;
   }
-  75% {background-position: 75% 25%;}
+  75% {
+    background-position: 75% 25%;
+  }
   100% {
     background-position: 0% 35%;
   }
 }
 
-
-
-
-.headerdiv{
+.headerdiv {
   height: 100vh;
   display: flex;
   justify-content: center;
   align-items: center;
- 
 }
 
 @media (max-width: 1050px) {
-  .headerdiv{
+  .headerdiv {
     height: 100vh;
     display: flex;
     justify-content: center;
@@ -51,7 +56,11 @@ body{
     padding: 0 10px;
     flex-wrap: wrap;
   }
-  
+
+  .typing-text{
+   overflow: hidden;
+   font-size: 40px;
+  }
 }
 
 .header {
@@ -59,17 +68,16 @@ body{
   color: white;
   text-align: left;
   font-family: "Oceanwide";
-  font-size:90px;
+  font-size: 90px;
   font-weight: Bold;
   padding-bottom: 50px;
   margin: 50px;
   position: relative;
   display: flex;
-    justify-content: flex-start;
+  justify-content: flex-start;
   flex-direction: column;
   transition: all 0.5s ease-in-out;
   position: relative;
-
 }
 
 .header.fixed {
@@ -77,25 +85,22 @@ body{
   top: -100vh;
 }
 
-.welcome{
+.welcome {
   position: relative;
   width: 500px;
 }
 
-.welcome-text{
+.welcome-text {
   color: rgb(255, 255, 255);
-  font-family:  sans-serif;
+  font-family: sans-serif;
   font-weight: 100;
-  font-size: 25px ;
+  font-size: 25px;
   margin: 20px 0;
   animation: fade-in 1s ease-in-out;
   opacity: 0;
   animation-delay: none;
   animation-fill-mode: forwards;
-
 }
-
-
 
 @keyframes fade-in {
   from {
@@ -106,18 +111,17 @@ body{
   }
 }
 
-.project-pres{
+.project-pres {
   color: rgb(0, 0, 0);
   font-family: "Helvetica";
   font-weight: bolder;
-  font-size: 20px ;
+  font-size: 20px;
   margin: 20px 0;
   animation: fade-in 1s ease-in-out;
   opacity: 0;
   animation-delay: 1s;
   animation-fill-mode: forwards;
 }
-
 
 .typing-text {
   display: flex;
@@ -128,19 +132,25 @@ body{
   overflow: hidden;
   white-space: nowrap;
   flex-wrap: wrap;
-
 }
 
-
-
 @keyframes typing {
-  from { width: 0 }
-  to { width: 100% }
+  from {
+    width: 0;
+  }
+  to {
+    width: 100%;
+  }
 }
 
 @keyframes blink-caret {
-  from, to { border-color: transparent }
-  50% { border-color: black }
+  from,
+  to {
+    border-color: transparent;
+  }
+  50% {
+    border-color: black;
+  }
 }
 
 .arrow {
@@ -152,7 +162,6 @@ body{
 }
 
 @media (max-width: 1050px) {
-
   .arrow {
     position: fixed;
     bottom: -5px;
@@ -182,11 +191,11 @@ body{
   }
 }
 
-.arrowimg{
+.arrowimg {
   width: 30px;
 }
 
-.scrolltext{
+.scrolltext {
   color: white;
   font-family: sans-serif;
   font-weight: 500;
@@ -204,7 +213,8 @@ body{
 }
 
 @keyframes cursor-blink {
-  from, to {
+  from,
+  to {
     border-color: transparent;
   }
   50% {
@@ -212,30 +222,28 @@ body{
   }
 }
 
-
-
-.contentpage{
+.contentpage {
   display: flex;
   justify-content: center;
   align-items: center;
   flex-direction: column;
 }
 
-.contentframe{
+.contentframe {
   display: flex;
-  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px, rgba(0, 0, 0, 0.22) 0px 10px 10px;
-   width: 70%;
-   border-radius: 20px;
-   overflow: hidden;
-   margin: 30px;    
-   
+  box-shadow: rgba(0, 0, 0, 0.25) 0px 14px 28px,
+    rgba(0, 0, 0, 0.22) 0px 10px 10px;
+  width: 70%;
+  border-radius: 20px;
+  overflow: hidden;
+  margin: 30px;
 }
 
 @media (max-width: 1050px) {
-  .contentframe{
-    flex-direction: column; 
-    width: 50%; 
-    margin: 40px auto; 
+  .contentframe {
+    flex-direction: column;
+    width: 80%;
+    margin: 40px auto;
     display: flex;
     flex-direction: column;
     align-items: center;
@@ -243,232 +251,227 @@ body{
   }
 }
 
-.contentpage{
+.contentpage {
+  animation: fade-in 1s ease-in-out;
+  opacity: 0;
+  animation-delay: 3s;
+  animation-fill-mode: forwards;
+}
 
-    animation: fade-in 1s ease-in-out;
+@keyframes fade-in {
+  from {
     opacity: 0;
-    animation-delay: 3s;
-    animation-fill-mode: forwards;
   }
-  
-  @keyframes fade-in {
-    from {
-      opacity: 0;
-    }
-    to {
-      opacity: 1;
-    }
+  to {
+    opacity: 1;
   }
+}
 
+.navbar {
+  width: 100%;
+  height: 60px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-top: 10px;
+  flex-wrap: wrap;
+}
 
-  .navbar{
-    width: 100%;
-    height: 60px;
+@media (max-width: 1050px) {
+  .navbar {
     display: flex;
-    justify-content: space-between;
     align-items: center;
-    margin-top: 10px;
-    flex-wrap:wrap;
+    justify-content: space-between;
+    flex-wrap: wrap;
+    padding: 10px;
   }
+}
 
-  @media (max-width: 1050px) {
-    .navbar {
-      display: flex;
-      flex-direction: column;
-      justify-content: flex-start;
-      align-items: flex-start;
-      padding: 10px;
-    }
-  }
+.aboutme {
+  font-family: "Oceanwide";
+  font-weight: Bolder;
+  font-size: 22px;
+  color: white;
+  margin: 0 25px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
-  .logo{
-  width: 50px;
-  margin-left : 70px;
-  padding-right: 45px;
-  }
-  @media (max-width: 1050px) { 
-
-    .logo{
-      width: 50px;
-      margin-left : 5px;
-      }
-  }
-
-
-  .aboutme{
+@media (max-width: 1050px) {
+  .aboutme {
     font-family: "Oceanwide";
     font-weight: Bolder;
     font-size: 22px;
     color: white;
-    margin: 0 25px;
+    margin: 0 5px;
     border: none;
     background-color: transparent;
     cursor: pointer;
-
   }
+}
 
-  @media (max-width: 1050px) {
-    .aboutme{
-      font-family: "Oceanwide";
-      font-weight: Bolder;
-      font-size: 22px;
-      color: white;
-      margin: 0 5px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-  
-    }
-  }
+.aboutme:hover {
+  transform: scale(1.1);
+}
 
-  .aboutme:hover{
-    transform: scale(1.1);
+.contactme {
+  font-family: "Oceanwide";
+  font-weight: Bolder;
+  font-size: 22px;
+  color: white;
+  margin: 0 70px 0 25px;
+  border: none;
+  background-color: transparent;
+}
 
-  }
-
-  .contactme{
+@media (max-width: 1050px) {
+  .contactme {
     font-family: "Oceanwide";
     font-weight: Bolder;
     font-size: 22px;
     color: white;
-    margin: 0 70px 0 25px;
+    margin: 0 5px;
     border: none;
+    padding-right: 15px;
     background-color: transparent;
   }
+}
 
-  @media (max-width: 1050px) {
-    .contactme{
-      font-family: "Oceanwide";
-      font-weight: Bolder;
-      font-size: 22px;
-      color: white;
-      margin: 0 5px 0 5px;
-      border: none;
-      background-color: transparent;
-    }
-  }
+.contactme:hover {
+  transform: scale(1.1);
+}
 
-  .contactme:hover{
-    transform: scale(1.1);
+.myresume a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
 
-  }
+.contactme a {
+  text-decoration: none;
+  color: white;
+  cursor: pointer;
+}
 
-  .myresume  a {
-    text-decoration: none;
-    Color: white;
-    cursor: pointer;
-
-  }
-
-  .contactme a {
-    text-decoration: none;
-    Color: white;
-    cursor: pointer;
-
-  }
-
-.hrbar{
+.hrbar {
   color: black;
   width: 80%;
 }
 
-  a{
-    max-width: 500px;
-  }
+a {
+  max-width: 500px;
+}
 
-  .websitethumbs{
-    width: 400px;
-    min-height: 100%;
-  }
+.websitethumbs {
+  width: 400px;
+  min-height: 100%;
+}
 
-  .projectdescription{
+.projectdescription {
+  display: flex;
+  flex-direction: column;
+  font-family: "Oceanwide";
+  color: white;
+  justify-content: center;
+  align-items: flex-start;
+  padding: 20px;
+}
+
+@media (max-width: 1050px) {
+  .projectdescription {
     display: flex;
     flex-direction: column;
     font-family: "Oceanwide";
     color: white;
     justify-content: center;
-    align-items: flex-start;
+    align-items: center;
     padding: 20px;
+    width: 90%;
   }
+}
 
-  @media (max-width: 1050px) { 
-    .projectdescription{
-      display: flex;
-      flex-direction: column;
-      font-family: "Oceanwide";
-      color: white;
-      justify-content: center;
-      align-items: center;
-      padding: 20px;
-      width: 60%;
-    }
+.myresume {
+  font-family: "Oceanwide";
+  font-weight: Bolder;
+  font-size: 22px;
+  color: white;
+  margin: 0 25px;
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+}
 
-  }
-
-
-  .myresume{
+@media (max-width: 1050px) {
+  .myresume {
     font-family: "Oceanwide";
     font-weight: Bolder;
     font-size: 22px;
     color: white;
-    margin: 0 25px;
+    margin: 0 5px;
     border: none;
     background-color: transparent;
     cursor: pointer;
   }
+}
 
+.myresume:hover {
+  transform: scale(1.1);
+}
 
-  @media (max-width: 1050px) {
-    .myresume{
-      font-family: "Oceanwide";
-      font-weight: Bolder;
-      font-size: 22px;
-      color: white;
-      margin: 0 5px;
-      border: none;
-      background-color: transparent;
-      cursor: pointer;
-    }
+.logo {
+  width: 50px;
+  margin-left: 70px;
+  padding-right: 45px;
+}
+@media (max-width: 1050px) {
+  .logo {
+    width: 50px;
+    margin: 0 5px;
+    padding-right: 0;
   }
-  
-  .myresume:hover{
-    transform: scale(1.1);
+}
 
-  }
-
-.logolinkedin{
+.logolinkedin {
   width: 40px;
   margin-left: 75px;
   cursor: pointer;
 }
-.logolinkedin:hover{
+.logolinkedin:hover {
   transform: scale(1.1);
 }
 
-@media (max-width: 1050px) { 
-
-  .logolinkedin{
+@media (max-width: 1050px) {
+  .logolinkedin {
     width: 40px;
-    margin-left: 1px;
     cursor: pointer;
-  }
+    margin: 0 10px;
 
+  }
+  .logogithub {
+    width: 40px;
+    cursor: pointer;
+    margin: 0px;
+  }
+  .logos_leftside{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+  }
 }
 
-
-.logogithub{
+.logogithub {
   width: 40px;
-  margin-left: 40px;
+  margin: 0 40px;
   cursor: pointer;
 }
 
-
-
-.logogithub:hover{
+.logogithub:hover {
   transform: scale(1.1);
 }
 
-.footer{
+.footer {
   display: flex;
   align-items: center;
   justify-content: space-between;
@@ -479,31 +482,69 @@ body{
   box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
 }
 
-.footerleftside{
+@media (max-width: 1050px) {
+  .footer {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin-top: 70px;
+    width: 100%;
+    height: 200px;
+    background-color: white;
+    box-shadow: rgba(0, 0, 0, 0.56) 0px 22px 70px 4px;
+  }
+
+  .footerleftside {
+    font-family: sans-serif;
+    color: #4158d0;
+    font-weight: 200;
+    margin: 5px;
+  }
+  .footerrightside {
+    margin: 5px;
+  }
+  .logogithubfooter {
+    width: 40px;
+    cursor: pointer;
+    margin: 15px;
+  }
+
+  .logolinkedinfooter {
+    width: 40px;
+    cursor: pointer;
+    margin: 15px;
+  }
+
+  .emailicon {
+    width: 40px;
+    cursor: pointer;
+    margin: 15px;
+  }
+}
+
+.footerleftside {
   font-family: sans-serif;
-  color: #4158D0;
+  color: #4158d0;
   font-weight: 200;
   margin: 0 90px;
 }
 
-.footerrightside{
+.footerrightside {
   margin: 0 90px;
-
 }
 
-
-.arrowupimg{
+.arrowupimg {
   width: 40px;
   cursor: pointer;
 }
 
 .arrowup {
-
   animation: bounce 1s infinite;
 }
 
 @keyframes bounce {
-  0%, 100% {
+  0%,
+  100% {
     transform: translateY(0);
   }
   50% {
@@ -511,45 +552,38 @@ body{
   }
 }
 
-.logogithubfooter{
-  width: 40px;
-  cursor: pointer;
-  margin: 0 10px;
-
-}
-
-.logolinkedinfooter{
+.logogithubfooter {
   width: 40px;
   cursor: pointer;
   margin: 0 10px;
 }
 
-
-.emailicon{
-
+.logolinkedinfooter {
   width: 40px;
   cursor: pointer;
   margin: 0 10px;
-
 }
 
-.hichpic{
+.emailicon {
+  width: 40px;
+  cursor: pointer;
+  margin: 0 10px;
+}
+
+.hichpic {
   width: 90px;
   border: 3px solid black;
   border-radius: 3px;
   margin-bottom: 15px;
 }
 
-.aboutmehead{
+.aboutmehead {
   padding: 40px 40px 10px 40px;
-  display:flex;
+  display: flex;
   align-items: center;
   flex-direction: column;
 }
 
-.aboutmetext{
+.aboutmetext {
   padding: 0 40px 40px 40px;
 }
-
-
-
