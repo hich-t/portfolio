@@ -9,6 +9,11 @@
     url("../fonts/Oceanwide-Semibold.otf") format("opentype");
 }
 
+.repolinks{
+  color: white;
+  text-decoration: none underline;
+}
+
 body {
   background-color: #4158d0;
   background-image: linear-gradient(
